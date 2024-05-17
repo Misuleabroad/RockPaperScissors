@@ -28,8 +28,8 @@ function getHumanChoice() {
 function playRound() {
   const computerSelection = getComputerChoice();
   const humanSelection = getHumanChoice();
-  console.log(computerSelection);
-  console.log(humanSelection);
+  console.log(`Computer: ${computerSelection}`);
+  console.log(`You chose: ${humanSelection}`);
   if (
     (computerSelection == "paper" && humanSelection == "rock") ||
     (computerSelection == "scissors" && humanSelection == "paper") ||
@@ -39,7 +39,7 @@ function playRound() {
     computerScore++;
   } else if (computerSelection === humanSelection) {
     console.log(`Draw`);
-  } else console.log(`You win`);
+  } else console.log(`You win ${humanSelection} beats ${computerSelection}`);
   humanScore++;
 }
 
