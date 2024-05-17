@@ -37,10 +37,14 @@ function playRound() {
   ) {
     console.log(`You lose ${computerSelection} beats ${humanSelection}`);
     computerScore++;
-  } else if (computerSelection === humanSelection) {
-    console.log(`Draw`);
-  } else console.log(`You win ${humanSelection} beats ${computerSelection}`);
-  humanScore++;
+  } else if (
+    (humanSelection == "paper" && computerSelection == "rock") ||
+    (humanSelection == "scissors" && computerSelection == "paper") ||
+    (humanSelection == "rock" && computerSelection == "scissor")
+  ) {
+    console.log(`You win ${humanSelection} beats ${computerSelection}`);
+    humanScore++;
+  } else console.log("Draw");
 }
 
 function playGame() {
